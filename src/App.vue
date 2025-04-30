@@ -57,6 +57,7 @@ export default defineComponent({
       { name: "Fox", image: "/images/fox.png", description: "Blazing speed and deadly lasers.", flipped: false },
       { name: "Pikachu", image: "/images/pikachu.png", description: "Electric mouse, nimble and zappy.", flipped: false }
     ])
+
     function flipCard(index: number): void {
       cards[index].flipped = !cards[index].flipped
     }
@@ -81,8 +82,14 @@ export default defineComponent({
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); color: #333; }
-  50% { transform: scale(1.05); color: #ff4081; }
+  0%, 100% {
+    transform: scale(1);
+    color: #333;
+  }
+  50% {
+    transform: scale(1.05);
+    color: #ff4081;
+  }
 }
 
 .card-grid {
